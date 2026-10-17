@@ -2,74 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NovaTech Solutions</title>
-
-    <!-- 🔹 External CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- 🔹 Internal CSS (override one section) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puneeth Reddy T - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Internal CSS override */
-        .about {
-            background-color: #eef7ff;
-            border-left: 6px solid #0077cc;
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            border-bottom: 1px solid #334155;
+            margin-bottom: 3rem;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            border-left: 4px solid var(--accent);
+            padding-left: 0.75rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .contact-section {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .email-box {
+            display: inline-block;
+            background: #0f172a;
+            border: 1px dashed var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 1.05rem;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            padding-top: 2rem;
         }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>Puneeth Reddy T</h1>
+            <p>Developer & Data Science Scholar | IIT Madras</p>
+        </header>
 
-    <!-- ================= HERO SECTION ================= -->
-    <div class="hero">
-        <h1>Welcome to <span class="highlight">NovaTech</span></h1>
-        <p>
-            Building <span style="color: yellow; font-weight: bold;">
-            future-ready solutions
-            </span> for modern businesses.
-        </p>
+        <section>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <h3>AgriSahayak</h3>
+                    <p>AI-driven agricultural decision support platform helping farmers with crop recommendations and disease identification.</p>
+                </div>
+                <div class="card">
+                    <h3>Exasol</h3>
+                    <p>High-performance data computing algorithms and research tools designed for distributed processing tasks.</p>
+                </div>
+                <div class="card">
+                    <h3>SIGIL</h3>
+                    <p>Next-generation web interface and frontend architecture focusing on intuitive user experience and modular design.</p>
+                </div>
+                <div class="card">
+                    <h3>NeoPulse</h3>
+                    <p>Real-time analytics engine and dashboard visualizing streaming telemetry metrics efficiently.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out for research collaborations, project discussions, or inquiries.</p>
+            <div class="email-box">
+                Contact: <!--email_off-->24f2003390@ds.study.iitm.ac.in<!--/email_off-->
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Puneeth Reddy T. All rights reserved.</p>
+        </footer>
     </div>
-
-    <!-- ================= ABOUT SECTION ================= -->
-    <div class="section about">
-        <h2>About Us</h2>
-        <p>
-            NovaTech is a <span class="highlight">technology startup</span> focused on
-            scalable software, AI systems, and cloud solutions.
-        </p>
-    </div>
-
-    <!-- ================= SERVICES SECTION ================= -->
-    <div class="section">
-        <h2>Our Services</h2>
-
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>
-                Responsive and high-performance websites for startups and enterprises.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>AI & Automation</h3>
-            <p>
-                Intelligent automation to streamline business operations.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Cloud Solutions</h3>
-            <p>
-                Secure, scalable, and cost-effective cloud infrastructure.
-            </p>
-        </div>
-    </div>
-
-    <!-- ================= CONTACT SECTION ================= -->
-    <div class="section contact">
-        <h2>Contact Us</h2>
-        <p>Email: contact@novatech.com</p>
-        <p>Phone: +91 98765 43210</p>
-    </div>
-
 </body>
 </html>
